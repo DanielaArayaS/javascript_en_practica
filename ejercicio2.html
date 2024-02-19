@@ -35,7 +35,22 @@
     </div>
 </div>
     <script>
-    // Escríbe aquí tu código
+
+        // Referencia de la caja y los botones
+        let caja = document.getElementById('caja');
+        let botones = document.querySelectorAll('button');
+
+        // Evento listener
+        botones.forEach(function(boton) {
+            boton.addEventListener('click', function() {
+               
+                // Color de fondo del botón con un click
+                let color = boton.style.backgroundColor;
+               
+                // Cambia el color de fondo de la caja al color del botón
+                caja.style.backgroundColor = color;
+            });
+        });
     </script>
 </body>
 
