@@ -35,7 +35,30 @@
         </div>
     </div>
     <script>
-    // Escríbe aquí tu código
+         
+         // Función para sumar números
+         function sumar() {
+            let valor1 = parseFloat(document.getElementById('valor1').value);
+            let valor2 = parseFloat(document.getElementById('valor2').value);
+            let resultado = valor1 + valor2;
+            document.querySelector('.resultado').textContent = resultado;
+        }
+
+        // Función para restar números
+        function restar() {
+            let valor1 = parseFloat(document.getElementById('valor1').value);
+            let valor2 = parseFloat(document.getElementById('valor2').value);
+            let resultado = valor1 - valor2;
+            // Si el resultado es negativo debe mostrar 0
+            if (resultado < 0) {
+                resultado = 0;
+            }
+            document.querySelector('.resultado').textContent = resultado;
+        }
+
+        // Agregar Evento listeners a los botones
+        document.getElementById('btn-sumar').addEventListener('click', sumar);
+        document.getElementById('btn-restar').addEventListener('click', restar);
     </script>
 </body>
 
